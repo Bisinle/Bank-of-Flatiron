@@ -15,9 +15,17 @@ function App() {
   //*********************************************************** */
   useEffect(() => {
     fetch(`  http://localhost:3000/transactions`)
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.ok) {
+          console.log("RESPONSE Ok");
+        } else {
+          console.log("Not OK");
+        }
+        return res.json();
+      })
       .then((data) => setTransactions(data));
   }, [watchedByEffect]);
+  // console.log(transactions);
   //
   //
   //

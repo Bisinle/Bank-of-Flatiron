@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 function TransactionList({ transactions, onDeleteTransaction, searchInput }) {
   //   const { id, date, description, category, amount } = transactions;
   //   console.log(transactions);
-  console.log(searchInput);
+  //   console.log(searchInput);
 
   function onEditTransaction(id) {
     console.log(id);
@@ -25,8 +25,10 @@ function TransactionList({ transactions, onDeleteTransaction, searchInput }) {
     </tr>
   ));
 
+  console.log(transactions);
+
   const filteredTransactions = transactions
-    .filer((currentTransaction) => {
+    .filter((currentTransaction) => {
       if (
         currentTransaction.description
           .toLowerCase()
