@@ -22,7 +22,18 @@ function App() {
   //
   //
   //************************************************************ */
+  function onDeleteTransaction(id) {
+    console.log(id);
+    setWatchedByEffect(!watchedByEffect);
+    fetch(`http://localhost:3000/transactions/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
 
+  /*********************************************** */
   function PostFormObjectToServer(formObject) {
     console.log(formObject);
     setWatchedByEffect(!watchedByEffect);
@@ -57,7 +68,7 @@ function App() {
         <TransactionForm PostFormObjectToServer={PostFormObjectToServer} />
       )}
       <TransactionList
-      searchInput={searchInput}
+        searchInput={searchInput}
         transactions={transactions}
         onDeleteTransaction={onDeleteTransaction}
       />
