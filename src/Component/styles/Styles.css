@@ -7,6 +7,14 @@ body {
   background: #03766c;
   text-align: center;
 }
+#light {
+  background-color: var(--mainColor);
+  color: white;
+}
+#dark {
+  background-color: #111;
+  color: white;
+}
 
 .App {
   display: flex;
@@ -46,6 +54,9 @@ body {
   background-color: #000000;
   padding-right: 40px;
   color: white;
+}
+.input-search #dark {
+  background-color: yellow;
 }
 .input-search::placeholder {
   color: var(--secondaryColor);

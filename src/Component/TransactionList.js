@@ -32,6 +32,9 @@ function TransactionList({ transactions, onDeleteTransaction, searchInput }) {
       if (
         currentTransaction.description
           .toLowerCase()
+          .includes(searchInput.toLowerCase()) ||
+        currentTransaction.category
+          .toLowerCase()
           .includes(searchInput.toLowerCase())
       ) {
         return currentTransaction;

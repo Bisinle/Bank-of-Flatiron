@@ -1,14 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import ReactSwitch from "react-switch";
+import { createContext } from "react";
 import TransactionList from "./Component/TransactionList";
 import Styles from "./Component/styles/Styles.css";
 import TransactionForm from "./Component/TransactionForm";
 import SearchBar from "./Component/SearchBar";
+
+const themeContext = createContext(null);
 function App() {
   const [transactions, setTransactions] = useState([]);
   const [watchedByEffect, setWatchedByEffect] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [searchInput, setSearchInput] = useState("");
+  const [theme, setTheme] = useState("light");
 
   //
   //
@@ -64,9 +69,17 @@ function App() {
     setShowForm(!showForm);
   }
   const btnText = showForm ? "close Form " : "Add Transaction";
+  function toggleSwitchHnadler() {
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }
   return (
-    <div className="App">
+    <div className="App" id={theme}>
       <h1>KONOHA BANK</h1>
+      <ReactSwitch onChange={toggleSwitchHnadler} checked={theme === "dark"} />
 
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
       <button className="add-form" onClick={addTransaction}>
