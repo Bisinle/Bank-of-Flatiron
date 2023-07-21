@@ -1,0 +1,26 @@
+body {
+  background: #03766c;
+}
+.table-div {
+  width: 80%;
+  margin: auto;
+}
+
+.table-theme {
+  margin: auto;
+
+  color: white;
+}
+thead {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #000;
+}
+td {
+  font-size: 12px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #034c46;
+}
