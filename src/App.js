@@ -79,7 +79,10 @@ function App() {
   return (
     <div className="App" id={theme}>
       <h1>KONOHA BANK</h1>
-      <ReactSwitch onChange={toggleSwitchHnadler} checked={theme === "dark"} />
+      <div className="Switch">
+
+      <ReactSwitch className="react-switch" onChange={toggleSwitchHnadler} checked={theme === "dark"} />
+      </div>
 
       <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
       <button className="add-form" onClick={addTransaction}>
