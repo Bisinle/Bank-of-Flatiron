@@ -7,13 +7,14 @@ import Styles from "./Component/styles/Styles.css";
 import TransactionForm from "./Component/TransactionForm";
 import SearchBar from "./Component/SearchBar";
 
-const themeContext = createContext(null);
+export const themeContext = createContext(null);
 function App() {
   const [transactions, setTransactions] = useState([]);
   const [watchedByEffect, setWatchedByEffect] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [theme, setTheme] = useState("light");
+  const [bodyBgc, setBodyBgc] = useState({ theme: "light" });
 
   //
   //
@@ -68,35 +69,45 @@ function App() {
   function addTransaction() {
     setShowForm(!showForm);
   }
-  const btnText = showForm ? "close Form " : "Add Transaction";
   function toggleSwitchHnadler() {
     if (theme === "light") {
       setTheme("dark");
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
     } else {
       setTheme("light");
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
     }
   }
+  const btnText = showForm ? "close Form " : "Add Transaction";
+
   return (
-    <div className="App" id={theme}>
-      <h1>KONOHA BANK</h1>
-      <div className="Switch">
+    <themeContext.Provider value={theme}>
+      <div className="App" id={theme}>
+        <h1>KONOHA BANK</h1>
+        <div className="Switch">
+          <ReactSwitch
+            className="react-switch"
+            onChange={toggleSwitchHnadler}
+            checked={theme === "dark"}
+          />
+        </div>
 
-      <ReactSwitch className="react-switch" onChange={toggleSwitchHnadler} checked={theme === "dark"} />
+        <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
+        <button className="add-form" onClick={addTransaction}>
+          {btnText}
+        </button>
+        {showForm && (
+          <TransactionForm PostFormObjectToServer={PostFormObjectToServer} />
+        )}
+        <TransactionList
+          searchInput={searchInput}
+          transactions={transactions}
+          onDeleteTransaction={onDeleteTransaction}
+        />
       </div>
-
-      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
-      <button className="add-form" onClick={addTransaction}>
-        {btnText}
-      </button>
-      {showForm && (
-        <TransactionForm PostFormObjectToServer={PostFormObjectToServer} />
-      )}
-      <TransactionList
-        searchInput={searchInput}
-        transactions={transactions}
-        onDeleteTransaction={onDeleteTransaction}
-      />
-    </div>
+    </themeContext.Provider>
   );
 }
 

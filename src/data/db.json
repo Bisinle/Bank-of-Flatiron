@@ -99,11 +99,25 @@
       "id": 14
     },
     {
-      "category": "Food",
-      "description": "chapati from Ty's palace",
-      "amount": "150",
-      "date": "22222222",
+      "category": "Sports",
+      "description": "Bought football trainers",
+      "amount": "1000",
+      "date": "2023-06-15",
       "id": 15
+    },
+    {
+      "category": "Date",
+      "description": "went on a date with MOM",
+      "amount": "5000",
+      "date": "2023-07-22",
+      "id": 16
+    },
+    {
+      "category": "Trip",
+      "description": "Vacation to Mombasa ",
+      "amount": "50000",
+      "date": "2023-03-22",
+      "id": 17
     }
   ]
 }

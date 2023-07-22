@@ -1,7 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { themeContext } from "../App";
 
 export default function TransactionForm({ PostFormObjectToServer }) {
+  const themeFromApp = useContext(themeContext);
   const [FormObject, setFormObject] = useState({
     category: "",
     description: "",
@@ -29,7 +32,7 @@ export default function TransactionForm({ PostFormObjectToServer }) {
     });
   }
   return (
-    <form onSubmit={formSubmit}>
+    <form onSubmit={formSubmit} id={themeFromApp}>
       <fieldset>
         <div className="input-data">
           <input
