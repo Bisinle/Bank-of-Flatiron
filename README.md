@@ -43,9 +43,9 @@ This code represents a React application called "KONOHA BANK," which allows user
    The TransactionList component is responsible for rendering the transactions and provides functionality to filter transactions based on the searchInput state.
    Users can delete transactions by clicking the delete button, which triggers the onDeleteTransaction function.
 
-   ### 1. TransactioList
+### 2. TransactioList
 
-   The TransactionList component receives transactions, onDeleteTransaction, and searchInput as props. It uses the useState and useEffect hooks for state management. The component displays a table containing transaction details, including id, category, description, amount, date, and an edit button for each transaction.
+The TransactionList component receives transactions, onDeleteTransaction, and searchInput as props. It uses the useState and useEffect hooks for state management. The component displays a table containing transaction details, including id, category, description, amount, date, and an edit button for each transaction.
 
 Key Functionality:
 
