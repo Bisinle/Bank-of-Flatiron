@@ -8,14 +8,14 @@ To run the React Todo App on your local machine, follow these steps:
 
 1. Clone the repository: git clone https://github.com/your-username/react-todo-app.git
 2. Navigate to the project directory: cd react-todo-app
-3. Install dependencies: npm install
-4. Navigate to srce/data to start the server : json-server --watch ./src/data/db.json
-5. Start the development server: npm start
-6. Open your browser and go to http://localhost:3000 to view the app.
+3. Install dependencies: `npm install`
+4. Navigate to `src/data` to start the server : `json-server --watch ./src/data/db.json`
+5. Start the development server: `npm start`
+6. Open your browser and go to `http://localhost:3000 `to view the app.
 
 
 # <ins>Components Overview</ins>
-1. App
+ ### 1. App
    This code represents a React application called "KONOHA BANK," which allows users to manage their transactions. Here's a description of what the code does:
 
 1. State Management:
