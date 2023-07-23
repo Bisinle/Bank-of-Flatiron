@@ -86,18 +86,23 @@ function App() {
     <themeContext.Provider value={theme}>
       <div className="App" id={theme}>
         <h1>KONOHA BANK</h1>
-        <div className="Switch">
-          <ReactSwitch
-            className="react-switch"
-            onChange={toggleSwitchHnadler}
-            checked={theme === "dark"}
+        <div className="nav">
+          <SearchBar
+            searchInput={searchInput}
+            setSearchInput={setSearchInput}
           />
+            <button className="add-form" onClick={addTransaction}>
+              {btnText}
+            </button>
+          <div className="Switch">
+            <ReactSwitch
+              className="react-switch"
+              onChange={toggleSwitchHnadler}
+              checked={theme === "dark"}
+            />
+          </div>
         </div>
 
-        <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
-        <button className="add-form" onClick={addTransaction}>
-          {btnText}
-        </button>
         {showForm && (
           <TransactionForm PostFormObjectToServer={PostFormObjectToServer} />
         )}

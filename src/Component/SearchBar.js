@@ -14,9 +14,8 @@ function SearchBar({ searchInput, setSearchInput }) {
         type="text"
         className="input-search"
         onChange={searchInputHandler}
-        placeholder="Type to Search..."
+        placeholder="Type to Filter..."
       />
-      
     </div>
   );
 }
