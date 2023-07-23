@@ -32,13 +32,34 @@ This code represents a React application called "KONOHA BANK," which allows user
 4. `Theme Management:`
    The app supports a light/dark theme toggle using the ReactSwitch component from the "react-switch" library.
    When the theme is toggled, the toggleSwitchHandler function is called to change the theme and apply corresponding styles to the body.
-   
+
 5. `Form Handling:`
    The app supports adding new transactions using the TransactionForm component.
-   When the `##` button is clicked, the addTransaction function toggles the display of the form.
+   When the button is clicked, the addTransaction function toggles the display of the form.
    Users can input transaction details in the form and submit it. The PostFormObjectToServer function sends a POST request to the server with the form data to add a new transaction.
 
-6.`Transaction Management:`
-The app displays a table of all transactions using the TransactionList component.
-The TransactionList component is responsible for rendering the transactions and provides functionality to filter transactions based on the searchInput state.
-Users can delete transactions by clicking the delete button, which triggers the onDeleteTransaction function.
+6. `Transaction Management:`
+   The app displays a table of all transactions using the TransactionList component.
+   The TransactionList component is responsible for rendering the transactions and provides functionality to filter transactions based on the searchInput state.
+   Users can delete transactions by clicking the delete button, which triggers the onDeleteTransaction function.
+
+   ### 1. TransactioList
+
+   The TransactionList component receives transactions, onDeleteTransaction, and searchInput as props. It uses the useState and useEffect hooks for state management. The component displays a table containing transaction details, including id, category, description, amount, date, and an edit button for each transaction.
+
+Key Functionality:
+
+1. `Transaction Rendering:` The component maps through the transactions array to display
+   each transaction in a table row using the Transaction component.
+
+2. `Filtering:` The transactions can be filtered based on user input in the SearchBar.
+   The searchInput prop is used to filter transactions based on matching descriptions or categories.
+
+3. `Sorting:` The component allows sorting transactions by category, description, or amount.
+   Clicking on the respective select options triggers the sortByCategory, sortByDescription, or sortByAmount functions, which sort the transactions based on the chosen criteria and update the displayed transactions accordingly.
+
+4. `Deletion:` Users can delete a transaction by clicking on the delete button, which triggers
+   the onDeleteTransaction function.
+
+5. `Theme Context:`
+   The component consumes the theme value from the themeContext created in the App component, enabling it to apply appropriate styles based on the current theme.
