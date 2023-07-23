@@ -47,7 +47,7 @@ This code represents a React application called "KONOHA BANK," which allows user
 
 The TransactionList component receives transactions, onDeleteTransaction, and searchInput as props. It uses the useState and useEffect hooks for state management. The component displays a table containing transaction details, including id, category, description, amount, date, and an edit button for each transaction.
 
-Key Functionality:
+<ins>Key Functionality:</ins>
 
 1. `Transaction Rendering:` The component maps through the transactions array to display
    each transaction in a table row using the Transaction component.
@@ -63,3 +63,25 @@ Key Functionality:
 
 5. `Theme Context:`
    The component consumes the theme value from the themeContext created in the App component, enabling it to apply appropriate styles based on the current theme.
+
+### 2. Transaction.js
+
+`Transaction component` encapsulates the visual representation and interactivity for a single transaction in the table, allowing users to `delete` or `edit` individual transactions with ease. This component is often used within the `TransactionList component` to display multiple transactions in the table view.
+
+### 3. TransactionForm
+
+Description:
+The TransactionForm component receives a callback function, PostFormObjectToServer, from its parent component, which is responsible for posting the new transaction data to the server.
+
+When rendered, the component displays an HTML form with input fields for category, description, amount, and date. Users can enter the relevant details for a new transaction into these input fields.
+
+<ins>Key Functionality:</ins>
+
+1. `State Management:` The component utilizes the useState hook to manage a state object named
+   FormObject, which holds the values entered by the user into the input fields.
+
+2. `Input Change Handler:` As users type or change values in the input fields, the
+   FornObjectCreator function is triggered, updating the FormObject state with the new values. This is achieved by using the spread operator to create a new state object with the updated values for the specific field.
+   
+3. `Form Submission:` When the form is submitted, the formSubmit function is called. It prevents
+   the default form submission behavior and invokes the PostFormObjectToServer callback, passing the FormObject state containing the new transaction data. After the submission, the input fields are reset to empty values using setFormObject.
