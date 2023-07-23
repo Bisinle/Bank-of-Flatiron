@@ -64,11 +64,11 @@ The TransactionList component receives transactions, onDeleteTransaction, and se
 5. `Theme Context:`
    The component consumes the theme value from the themeContext created in the App component, enabling it to apply appropriate styles based on the current theme.
 
-### 2. Transaction.js
+### 3. Transaction.js
 
 `Transaction component` encapsulates the visual representation and interactivity for a single transaction in the table, allowing users to `delete` or `edit` individual transactions with ease. This component is often used within the `TransactionList component` to display multiple transactions in the table view.
 
-### 3. TransactionForm
+### 4. TransactionForm
 
 Description:
 The TransactionForm component receives a callback function, PostFormObjectToServer, from its parent component, which is responsible for posting the new transaction data to the server.
@@ -82,6 +82,17 @@ When rendered, the component displays an HTML form with input fields for categor
 
 2. `Input Change Handler:` As users type or change values in the input fields, the
    FornObjectCreator function is triggered, updating the FormObject state with the new values. This is achieved by using the spread operator to create a new state object with the updated values for the specific field.
-   
 3. `Form Submission:` When the form is submitted, the formSubmit function is called. It prevents
    the default form submission behavior and invokes the PostFormObjectToServer callback, passing the FormObject state containing the new transaction data. After the submission, the input fields are reset to empty values using setFormObject.
+
+### 5. SearchBar
+
+Overall, the SearchBar component provides an input field where users can type their search queries, and it allows the parent component to manage and use the search query to filter and display relevant transactions based on user input.
+
+# Contact
+
+For any further questions or inquiries, please contact abdiwadud.mohamedd.@gmail.com.
+
+# License
+
+This code is developed by `Abdiwadud Mohamed` and is released under the `Bisinle` License.
