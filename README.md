@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+## KONOHA BANK
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The React Todo App is a simple web application that allows users to create and manage their to-do list. It demonstrates the usage of four components: App, TodoList, TodoItem, and AddTodo.
 
-## Available Scripts
+Transaction Tracker App
+The Transaction Tracker App is a web application that allows users to manage their transactions effectively. It provides a user-friendly interface where users can view a table of all transactions, add new transactions, and filter transactions based on description. Additionally, the app offers bonus features like sorting transactions alphabetically and deleting transactions from the table.
 
-In the project directory, you can run:
+Getting Started
+To run the React Todo App on your local machine, follow these steps:
 
-### `npm start`
+Clone the repository: git clone https://github.com/your-username/react-todo-app.git
+Navigate to the project directory: cd react-todo-app
+Install dependencies: npm install
+Start the development server: npm start
+Open your browser and go to http://localhost:3000 to view the app.
+Components Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. App
+   The App component is the root component of the Todo App. It manages the state of the entire application, including the list of todos. It also contains the TodoList component for displaying the list of todos and the AddTodo component for adding new todos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. TodoList
+   The TodoList component receives an array of todos as props from the App component and renders a list of TodoItem components. It also handles the logic for filtering and sorting the list of todos.
 
-### `npm test`
+3. TodoItem
+   The TodoItem component represents an individual todo item in the list. It receives the todo data as props from the TodoList component and displays the todo's text and completion status. It also provides a checkbox to mark the todo as completed and a delete button to remove the todo from the list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. AddTodo
+   The AddTodo component is responsible for adding new todos to the list. It contains a form with an input field where users can type their new todo and a submit button to add it to the list. The new todo is then passed back to the App component to update the state.
 
-### `npm run build`
+Contributing
+Contributions to the React Todo App are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
