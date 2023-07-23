@@ -2,17 +2,6 @@
 
 The Transaction Tracker App is a web application that allows users to manage their transactions effectively. It provides a user-friendly interface where users can view a table of all transactions, add new transactions, and filter transactions based on description or category. Additionally, the app offers bonus features like sorting transactions alphabetically by categor, description or amount and deleting transactions from the table.
 
-## Getting Started
-
-To run the React App on your local machine, follow these steps:
-
-1. Clone the repository: git clone https://github.com/Bisinle/konoha-bank
-2. Navigate to the project directory:` cd konoha-bank`
-3. Install dependencies: `npm install`
-4. Navigate to `src/data` to start the server : `json-server --watch ./src/data/db.json`
-5. Start the development server: `npm start`
-6. Open your browser and go to `http://localhost:3000 `to view the app.
-
 # <ins>Components Overview</ins>
 
 ### 1. App
@@ -89,10 +78,21 @@ When rendered, the component displays an HTML form with input fields for categor
 
 Overall, the SearchBar component provides an input field where users can type their search queries, and it allows the parent component to manage and use the search query to filter and display relevant transactions based on user input.
 
+## Getting Started
+
+To run the React App on your local machine, follow these steps:
+
+1. Clone the repository: git clone https://github.com/Bisinle/konoha-bank
+2. Navigate to the project directory:` cd konoha-bank`
+3. Install dependencies: `npm install`
+4. Navigate to `src/data` to start the server : `json-server --watch ./src/data/db.json`
+5. Start the development server: `npm start`
+6. Open your browser and go to `http://localhost:3000 `to view the app.
+
 # Contact
 
 For any further questions or inquiries, please contact abdiwadud.mohamedd.@gmail.com.
 
 # License
 
-This code is developed by `Abdiwadud Mohamed` and is  under the `Bisinle` License.
+This code is developed by `Abdiwadud Mohamed` and is under the `Bisinle` License.
