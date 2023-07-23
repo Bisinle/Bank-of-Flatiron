@@ -4,10 +4,10 @@ The Transaction Tracker App is a web application that allows users to manage the
 
 ## Getting Started
 
-To run the React Todo App on your local machine, follow these steps:
+To run the React App on your local machine, follow these steps:
 
-1. Clone the repository: git clone https://github.com/your-username/react-todo-app.git
-2. Navigate to the project directory: cd react-todo-app
+1. Clone the repository: git clone https://github.com/Bisinle/konoha-bank
+2. Navigate to the project directory: cd 
 3. Install dependencies: `npm install`
 4. Navigate to `src/data` to start the server : `json-server --watch ./src/data/db.json`
 5. Start the development server: `npm start`
