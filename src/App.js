@@ -20,7 +20,7 @@ function App() {
   //
   //*********************************************************** */
   useEffect(() => {
-    fetch(`  http://localhost:3000/transactions`)
+    fetch(` https://konoha-server.onrender.com/transactions`)
       .then((res) => {
         if (res.ok) {
           console.log("RESPONSE Ok");
@@ -39,7 +39,7 @@ function App() {
   function onDeleteTransaction(id) {
     console.log(id);
     setWatchedByEffect(!watchedByEffect);
-    fetch(`http://localhost:3000/transactions/${id}`, {
+    fetch(`https://konoha-server.onrender.com/transactions/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +51,7 @@ function App() {
   function PostFormObjectToServer(formObject) {
     console.log(formObject);
     setWatchedByEffect(!watchedByEffect);
-    fetch(`http://localhost:3000/transactions`, {
+    fetch(`https://konoha-server.onrender.com/transactions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -91,9 +91,9 @@ function App() {
             searchInput={searchInput}
             setSearchInput={setSearchInput}
           />
-            <button className="add-form" onClick={addTransaction}>
-              {btnText}
-            </button>
+          <button className="add-form" onClick={addTransaction}>
+            {btnText}
+          </button>
           <div className="Switch">
             <ReactSwitch
               className="react-switch"
