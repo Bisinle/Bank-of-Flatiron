@@ -20,7 +20,7 @@ function App() {
   //
   //*********************************************************** */
   useEffect(() => {
-    fetch(` https://konoha-server.onrender.com/transactions`)
+    fetch(`http://localhost:3000/transactions`)
       .then((res) => {
         if (res.ok) {
           console.log("RESPONSE Ok");
@@ -39,7 +39,7 @@ function App() {
   function onDeleteTransaction(id) {
     console.log(id);
     setWatchedByEffect(!watchedByEffect);
-    fetch(`https://konoha-server.onrender.com/transactions/${id}`, {
+    fetch(`http://localhost:3000/transactions/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +51,7 @@ function App() {
   function PostFormObjectToServer(formObject) {
     console.log(formObject);
     setWatchedByEffect(!watchedByEffect);
-    fetch(`https://konoha-server.onrender.com/transactions`, {
+    fetch(`http://localhost:3000/transactions`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

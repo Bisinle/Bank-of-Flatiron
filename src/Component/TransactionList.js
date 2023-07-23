@@ -10,26 +10,11 @@ function TransactionList({ transactions, onDeleteTransaction, searchInput }) {
   //   console.log(searchInput);
   const themeFromApp = useContext(themeContext);
   const [transactionState, setTransactionState] = useState([]);
-  const [sortedCategoryState, setSortedCategoryState] = useState([]);
-  const [sortedDescriptionState, setSortedDescriptionState] = useState([]);
   const [sortedWatchedState, setSortedWatchedState] = useState(true);
-  const [sortedAmountState, setSortedAmountState] = useState([]);
-  // const [categoryDescriptioState, setCategoryDescriptionState] = useState("");
+
   useEffect(() => {
     setTransactionState(transactions);
   }, [transactions]);
-
-  // useEffect(() => {
-  //   setTransactionState(sortedCategoryState);
-  // }, [sortedCategoryState, sortedWatchedState]);
-
-  // useEffect(() => {
-  //   setTransactionState(sortedDescriptionState);
-  // }, [sortedDescriptionState, sortedWatchedState]);
-
-  // useEffect(() => {
-  //   setTransactionState(sortedAmountState);
-  // }, [sortedAmountState, sortedWatchedState]);
 
   function onEditTransaction(id) {
     console.log(id);
